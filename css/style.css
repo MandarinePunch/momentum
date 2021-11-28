@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap");
+@font-face {
+  font-family: "digital-clock-font";
+  src: url("put_the_location_to_your_font.ttf or .otf");
+}
+* {
+  box-sizing: border-box;
+}
+a,
+h1 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+ul,
+li {
+  list-style: none;
+}
+
+body {
+  margin: 0 auto;
+  color: white;
+}
+@keyframes rotate {
+  from {
+    transform: rotateZ(0);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+.main-screen {
+  position: relative;
+}
+
+.hidden {
+  display: none;
+}
+.background {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  position: fixed;
+  filter: brightness(35%);
+}
+.welcome {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.welcome__title {
+  text-align: center;
+  width: 1060px;
+}
+.title {
+  font-size: 70px;
+  font-family: "Rock Salt", cursive;
+  color: rgb(168, 29, 4);
+  text-shadow: 1px 1px 2px pink;
+  font-weight: 600;
+}
+.welcome__title a {
+  text-decoration: none;
+  height: 120px;
+  font-size: 70px;
+  font-weight: 600;
+  font-family: "Rock Salt", cursive;
+  color: rgb(168, 29, 4);
+  text-shadow: 1px 1px 2px pink;
+}
+
+.welcome__clock-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  margin-bottom: 40px;
+}
+#clock {
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+  color: white;
+}
+.welcome__clock-image {
+  width: 160px;
+  height: 160px;
+  position: absolute;
+  z-index: -1;
+  animation: rotate 20s linear infinite;
+}
+
+.middle {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+input[type="text"]::placeholder {
+  color: white;
+}
+.login-quote {
+  margin: 50px 80px 0 0;
+}
+#quote span {
+  width: 390px;
+  font-size: 20px;
+}
+#quote span:first-child {
+  margin-bottom: 10px;
+  display: block;
+}
+
+#greeting {
+  margin: 0 0 127px 0;
+}
+#greeting button {
+  font-size: 15px;
+  border: 2px solid white;
+  border-radius: 30px;
+  margin-left: 20px;
+  background: none;
+  color: white;
+  padding: 7px 10px;
+  cursor: pointer;
+}
+#greeting button:hover {
+  background-color: white;
+  color: black;
+}
+#login-form {
+  margin-bottom: 110px;
+}
+#login-form input:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+#login-form input {
+  width: 380px;
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 30px;
+}
+.god {
+  display: flex;
+  margin-bottom: 110px;
+}
+.god span {
+  font-size: 18px;
+}
+.god__img {
+  margin-right: 20px;
+}
+.god__img-frame {
+  width: 100px;
+  height: 100px;
+  border-radius: 15px;
+  border: 2px solid white;
+}
+
+.name-todo {
+  height: 540px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: relative;
+  margin-top: 50px;
+}
+#todo-form input {
+  width: 380px;
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 30px;
+}
+#todo-form input:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+#todo-list {
+  width: 380px;
+  display: flex;
+  padding: 0;
+  flex-direction: column;
+}
+#todo-list li {
+  width: 380px;
+  padding: 0 20px;
+  margin-bottom: 10px;
+}
+#todo-list span {
+  font-size: 20px;
+}
+#todo-list button {
+  float: right;
+  outline: none;
+  border: none;
+  font-size: 20px;
+  background: none;
+}
+#todo-list button:last-child {
+  color: rgb(87, 190, 87);
+}
+#todo-list button:hover {
+  cursor: pointer;
+}
+.cutline {
+  text-decoration: line-through;
+  color: rgba(255, 255, 255, 0.5);
+}
+.name-todo__memo {
+  width: 380px;
+  height: 450px;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  position: absolute;
+  top: 60px;
+  z-index: -1;
+}
+#weather {
+  position: absolute;
+  bottom: 0px;
+  color: rgba(255, 255, 255, 0.5);
+}
